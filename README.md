@@ -1,0 +1,4 @@
+Pomodoro
+========
+
+Angular pomodoro app

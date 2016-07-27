@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-app="pomodoro">
+<div class="wrapper" ng-controller="mainCtrl">
+    <div class="pomodoro">
+        <h1>The Pomodoro Technique</h1>
+        <hr>
+        <ol>
+            <li>Choose a tast (just ONE task at a time)</li>
+            <li>Start this timer.  It will countdown from 25 minutes</li>
+            <li>Work on your task until the timer rings</li>
+            <li>Take a five minute break</li>
+            <li>Repeat steps 1-4</li>
+            <li>Watch your productivity go through the roof!</li>
+        </ol>
+    </div>
+  <div class="timer">
+    <span>{{now | countdown:current.endTime | date:'mm:ss'}}</span><br>
+  <!-- <div class="timer_buttons"> -->
+    <input value="Start Pomodoro" ng-click="pomodoro()" type="button">
+  <!-- </div> -->
+</div>
+</div>
+
+
+<script src="javascript/angular.min.js"></script>
+<script src="javascript/app.js"></script>
+<script src="javascript/mainCtrl.js"></script>
+</body>
+</html>
