@@ -1,5 +1,6 @@
 <!Doctype html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Pomodoro Technique</title>
@@ -10,33 +11,36 @@
     <meta name="author" content="Kyle Barlow">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body ng-app="pomodoro">
-<div class="wrapper" ng-controller="mainCtrl">
-    <div class="pomodoro">
+    <div class="wrapper" ng-controller="mainCtrl">
+        <div class="pomodoro">
 
-        <h1>The Pomodoro Technique</h1> <br><br>
-        <ol>
-            <li>Choose a tast (just ONE task at a time)</li>
-            <li>Start this timer.  It will countdown from 25 minutes</li>
-            <li>Work on your task until the timer rings</li>
-            <li>Take a five minute break</li>
-            <li>Repeat steps 1-5</li>
-            <li>Watch your productivity go through the roof!</li>
-        </ol>
+            <h1>The Pomodoro Technique</h1>
+            <br>
+            <br>
+            <ol>
+                <li>Choose a task (just ONE task at a time)</li>
+                <li>Start this timer. It will countdown from 25 minutes</li>
+                <li>Work on your task until the timer rings</li>
+                <li>Take a five minute break</li>
+                <li>Repeat steps 1-5</li>
+                <li>Watch your productivity go through the roof!</li>
+            </ol>
+        </div>
+        <div class="timer">
+            <span ng-hide="defaultTime">25:00</span>
+            <span ng-hide="timerz">{{now | countdown:current.endTime | date:'mm:ss'}}</span>
+            <br>
+            <input class="startButton" value="Start Pomodoro" ng-click="pomodoro()" type="button" ng-hide="startPomodoroButton">
+            <input class="stopButton" value="Stop Pomodoro" ng-click="stopPomodoro()" type="button" ng-hide="stopPomodoroButton">
+        </div>
     </div>
-  <div class="timer">
-    <span ng-hide="defaultTime">25:00</span>
-    <span ng-hide="timerz">{{now | countdown:current.endTime | date:'mm:ss'}}</span><br>
-  <!-- <div class="timer_buttons"> -->
-    <input class="startButton" value="Start Pomodoro" ng-click="pomodoro()" type="button" ng-hide="startPomodoroButton">
-    <input class="stopButton" value="Stop Pomodoro" ng-click="stopPomodoro()" type="button" ng-hide="stopPomodoroButton">
-  <!-- </div> -->
-</div>
-</div>
 
 
-<script src="javascript/angular.min.js"></script>
-<script src="javascript/app.js"></script>
-<script src="javascript/mainCtrl.js"></script>
+    <script src="javascript/angular.min.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/mainCtrl.js"></script>
 </body>
+
 </html>
