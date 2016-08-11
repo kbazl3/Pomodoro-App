@@ -8,20 +8,13 @@ body {
 .timer {
     width: 50%;
     height: 50%;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-.timer_buttons {
-    width: 25%;
-    height: auto;
-    background: #000;
-    margin: 40px auto;
-}
-
-input {
+.startButton {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -31,10 +24,49 @@ input {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    box-shadow: 0 7px #999;
+    border-radius: 15px;
+    outline: none;
+}
+
+.startButton:hover {
+    background-color: #6fbf72;
+    cursor: pointer
+}
+
+.startButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.stopButton {
+    background-color: #af504c;
+    border: none;
+    color: white;
+    margin: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 0 7px #999;
+    outline: none;
+}
+
+.stopButton:hover {
+    background-color: #c78481;
+    cursor: pointer
+}
+
+.stopButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .pomodoro {
     width: 50%;
     text-align: center;
-    margin: 0 auto;
+    margin: 75px auto;
 }
